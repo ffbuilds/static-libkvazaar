@@ -6,9 +6,8 @@ ARG KVAZAAR_VERSION=2.1.0
 ARG KVAZAAR_URL="https://github.com/ultravideo/kvazaar/archive/v$KVAZAAR_VERSION.tar.gz"
 ARG KVAZAAR_SHA256=bbdd3112182e5660a1c339e30677f871b6eac1e5b4ff1292ee1ae38ecbe11029
 
-# bump: alpine /ALPINE_VERSION=([\d.]+)/ docker:alpine|^3
-# bump: alpine link "Release notes" https://alpinelinux.org/posts/Alpine-$LATEST-released.html
-ARG ALPINE_VERSION=3.16.2
+# Must be specified
+ARG ALPINE_VERSION
 
 FROM alpine:${ALPINE_VERSION} AS base
 
