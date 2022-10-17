@@ -43,7 +43,6 @@ RUN \
   apk del build
 
 FROM scratch
-ARG ALPINE_VERSION
 ARG KVAZAAR_VERSION
 COPY --from=build /usr/local/lib/pkgconfig/kvazaar.pc /usr/local/lib/pkgconfig/kvazaar.pc
 COPY --from=build /usr/local/lib/libkvazaar.a /usr/local/lib/libkvazaar.a
